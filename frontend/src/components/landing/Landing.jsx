@@ -56,8 +56,8 @@ const OncoCureLanding = () => {
           {/* Hero - Clean and direct */}
           <div className="max-w-3xl mb-20">
             <h1 className="text-4xl md:text-5xl font-light tracking-tight mb-4">
-              AI-powered brain tumor 
-              <span className="text-blue-500 font-normal"> analysis</span>
+              AI-Powered Brain Tumor 
+              <span className="text-blue-500 font-normal"> Analysis</span>
             </h1>
             <p className="text-neutral-500 dark:text-neutral-400 text-lg mb-8 max-w-2xl">
               Upload MRI, get instant 3D visualization and clinical reports.
@@ -97,13 +97,13 @@ const OncoCureLanding = () => {
           {/* How it works - Minimal steps */}
           <div id="how-it-works" className="mb-20">
             <div className="flex items-center gap-2 mb-8">
-              <span className="text-xs font-mono text-blue-500">01</span>
+              <span className="text-xs font-mono text-blue-500"></span>
               <h2 className="text-sm font-medium tracking-wider text-neutral-500 dark:text-neutral-400">PROCESS</h2>
             </div>
             <div className="flex flex-wrap gap-8">
               {['Upload', 'Segment', 'Reconstruct', 'Report'].map((step, i) => (
                 <div key={step} className="flex items-center gap-3">
-                  <span className="text-xs text-blue-500 font-mono">0{i+2}</span>
+                  <span className="text-xs text-blue-500 font-mono">0{i+1}</span>
                   <span className="text-sm">{step}</span>
                   {i < 3 && <span className="text-neutral-300 dark:text-neutral-700">→</span>}
                 </div>
@@ -119,7 +119,7 @@ const OncoCureLanding = () => {
               </span>
               <span>★ 4.9 (200+ reviews)</span>
             </div>
-            <a href="/register" className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition">
+            <a href={user ? "/dashboard" : "/register"} className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition">
               Get started →
             </a>
           </div>
